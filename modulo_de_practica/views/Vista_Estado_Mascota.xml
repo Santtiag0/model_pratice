@@ -35,6 +35,10 @@
                             <group>
                                 <field name="name" placeholder="Nombre de la mascota"/>
                                 <field name="tipo"/>
+                                <field name="otro_tipo"
+                                invisible="tipo != 'otro'"
+                                required="tipo == 'otro'"
+                                placeholder="Especifique el tipo de raza"/>
                                 <field name="dueno_id"/>
                                 <field name="fecha_de_nacimiento"/>
                             </group>
