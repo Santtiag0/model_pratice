@@ -17,7 +17,7 @@
                     <button name="action_borrado" string="Volver a Borrado"
                     type="object"
                     invisible="state == 'borrado'"/>
-                    
+
                             <!-- Barra de estado visual -->
                         <field name="state" widget="statusbar"
                             statusbar_visible="borrado,registrado,adoptado"/>
@@ -26,7 +26,7 @@
                         <sheet>
                             <group>
                                 <div class="oe_title">
-                                    <h1><field name="name"/></h1>
+                                    <h1><field name="name" placeholder="Nombre de la mascota"/></h1>
                                 </div>
                                 
                                 <group>
