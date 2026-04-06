@@ -10,7 +10,7 @@
         ],
     
     'installable': True,
-    'application': false,
+    'application': True,
     'license': 'LGPL-3',
     'auto_install': False
     
