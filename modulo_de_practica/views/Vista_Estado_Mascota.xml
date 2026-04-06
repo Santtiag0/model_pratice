@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>  <!--  vista formulario con header de estado, grupos y notebook-->
     <record id="view_mascota_form" model="ir.ui.view">
         <field name="name">mi_modulo.mascota.form</field>
@@ -43,4 +44,46 @@
                     </form>
         </field>        
     </record>
+
+    <record id="view_mascota_search" model="ir.ui.view">
+        <field name="name">mi_modulo.mascota.search</field>
+        <field name="model">mi_modulo.mascota</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="dueno_id"/>
+                <filter name="vacunados" string="Vacunados"
+                        domain="[('es_vacunado', '=', True)]"/>
+                <group expand="0" string="Agrupar por">
+                    <filter name="group_tipo" string="Tipo"
+                            context="{'group_by': 'tipo'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_mascota_tree" model="ir.ui.view">
+        <field name="name">mi_modulo.mascota.tree</field>
+        <field name="model">mi_modulo.mascota</field>
+        <field name="arch" type="xml">
+            <tree string="Mascotas">
+                <field name="name"/>
+                <field name="tipo"/>
+                <field name="dueno_id"/>
+                <field name="edad"/>
+                <field name="es_vacunado"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="action_mascota" model="ir.actions.act_window">
+        <field name="name">Mascotas</field>
+        <field name="res_model">mi_modulo.mascota</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_mi_modulo" name="Mi Modulo"/>
+    <menuitem id="menu_mascotas" name="Mascotas"
+            parent="menu_mi_modulo"
+            action="action_mascota"/>
 </odoo>
