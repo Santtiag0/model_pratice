@@ -25,8 +25,8 @@
 
                         </div>
                         <notebook>
-                            <page string="notas">
-                                <field name="notas"/>
+                            <page string="nota">
+                                <field name="nota"/>
                             </page>
                         </notebook>
                         
