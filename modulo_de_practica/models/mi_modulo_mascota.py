@@ -4,7 +4,7 @@ class Mascota(models.Model):
     _name = 'mi_modulo.mascota'
     _description = 'Mascota'
 
-    name = fields.Char(string='Nombre')
+    name = fields.Char(string='Nombre de la mascota', required=True)
     tipo = fields.Selection(
     [('perro', 'Perro'), 
     ('gato', 'Gato'), 

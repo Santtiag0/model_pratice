@@ -31,7 +31,7 @@
                                 
                                 <group>
                                     <field name="Nombre" placeholder="Nombre de la mascota"/>
-
+                                    <field name="tipo"/>
                                     <field name="dueno_id"/>
                                     <field name="fecha_de_nacimiento"/>
                                 </group>
