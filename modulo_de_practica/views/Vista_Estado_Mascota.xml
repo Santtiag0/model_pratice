@@ -26,11 +26,11 @@
                         <sheet>
                             <group>
                                 <div class="oe_title">
-                                    <h1><field name="name"/></h1>
+                                    <h1><field name="name"/>Nombre de la mascota</h1>
                                 </div>
                                 
                                 <group>
-                                    <field name="Nombre" placeholder="Nombre de la mascota"/>
+                                    <field name="name" placeholder="Nombre de la mascota"/>
                                     <field name="tipo"/>
                                     <field name="dueno_id"/>
                                     <field name="fecha_de_nacimiento"/>
