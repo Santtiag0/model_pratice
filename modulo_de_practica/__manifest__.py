@@ -5,12 +5,14 @@
     'author': 'SantiagoMartinez',
     'depends': ['base'],
     'data' : [
-        'views/Vista_Estado_Mascota.xml',   
+        'security/ir.model.access.csv',
+        'views/Vista_Estado_Mascota.xml'
         ],
     
     'installable': True,
-    'application': True,
+    'application': false,
     'license': 'LGPL-3',
-    'auto_install': False,
+    'auto_install': False
+    
     
 }
