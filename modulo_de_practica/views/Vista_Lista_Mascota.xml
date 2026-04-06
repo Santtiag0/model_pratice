@@ -1,0 +1,13 @@
+<record id="view_mascota_tree" model="ir.ui.view">
+    <field name="name">mi_modulo.mascota.tree</field>
+    <field name="model">mi_modulo.mascota</field>
+    <field name="arch" type="xml">
+        <tree string="Mascotas">
+            <field name="name"/>
+            <field name="tipo"/>
+            <field name="dueno_id"/>
+            <field name="edad"/>
+            <field name="es_vacunado"/>
+        </tree>
+    </field>
+</record>
