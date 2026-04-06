@@ -23,6 +23,16 @@
                             <div class="oe_title">
                                 <h1><field name="name"/></h1>
                             </div>
+                            
+                            <group>
+                                <field name="tipo"/>
+                                <field name="dueno_id"/>
+                                <field name="edad"/>
+                                <field name="peso"/>
+                                <field name="es_vacunado"/>
+                                <field name="fecha_de_nacimiento"/>
+                            </group>
+
                             <notebook>
                                 <page string="nota">
                                     <field name="nota"/>
