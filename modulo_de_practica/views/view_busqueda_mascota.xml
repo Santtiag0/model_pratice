@@ -1,16 +1,18 @@
-<record id="view_mascota_search" model="ir.ui.view">
-    <field name="name">mi_modulo.mascota.search</field>
-    <field name="model">mi_modulo.mascota</field>
-    <field name="arch" type="xml">
-        <search>
-            <field name="name"/>
-            <field name="dueno_id"/>
-            <filter name="vacunados" string="Vacunados"
-                    domain="[('es_vacunado', '=', True)]"/>
-            <group expand="0" string="Agrupar por">
-                <filter name="group_tipo" string="Tipo"
-                        context="{'group_by': 'tipo'}"/>
-            </group>
-        </search>
-    </field>
-</record>
+<odoo>
+    <record id="view_mascota_search" model="ir.ui.view">
+        <field name="name">mi_modulo.mascota.search</field>
+        <field name="model">mi_modulo.mascota</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="dueno_id"/>
+                <filter name="vacunados" string="Vacunados"
+                        domain="[('es_vacunado', '=', True)]"/>
+                <group expand="0" string="Agrupar por">
+                    <filter name="group_tipo" string="Tipo"
+                            context="{'group_by': 'tipo'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>    

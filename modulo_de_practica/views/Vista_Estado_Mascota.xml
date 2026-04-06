@@ -1,36 +1,37 @@
-<!--  vista formulario con header de estado, grupos y notebook-->
-<record id="view_mascota_form" model="ir.ui.view">
-    <field name="name">mi_modulo.mascota.form</field>
-    <field name="model">mi_modulo.mascota</field>
-        <field name="arch" type="xml">
-            <form string="Estado de las mascotas">
-                    <header>
-                        <button name="action_registrado" string="Registrado"
-                                type="object" class="oe_highlight"
-                                invisible="state != 'borrado'"/>
-                        <button name="action_adoptado" string="Marcar Adoptado"
-                                type="object" class="oe_highlight"
-                                invisible="state != 'registrado'"/>
-                        <button name="action_borrado" string="Volver a Borrado"
-                                type="object"
-                                invisible="state == 'borrado'"/>
+<odoo>  <!--  vista formulario con header de estado, grupos y notebook-->
+    <record id="view_mascota_form" model="ir.ui.view">
+        <field name="name">mi_modulo.mascota.form</field>
+        <field name="model">mi_modulo.mascota</field>
+            <field name="arch" type="xml">
+                <form string="Estado de las mascotas">
+                        <header>
+                            <button name="action_registrado" string="Registrado"
+                                    type="object" class="oe_highlight"
+                                    invisible="state != 'borrado'"/>
+                            <button name="action_adoptado" string="Marcar Adoptado"
+                                    type="object" class="oe_highlight"
+                                    invisible="state != 'registrado'"/>
+                            <button name="action_borrado" string="Volver a Borrado"
+                                    type="object"
+                                    invisible="state == 'borrado'"/>
 
-                        <!-- Barra de estado visual -->
-                        <field name="state" widget="statusbar"
-                            statusbar_visible="borrado,registrado,adoptado"/>
-                    </header>
-                    <sheet>
-                        <div class="oe_title">
-                            <h1><field name="name"/></h1>
+                            <!-- Barra de estado visual -->
+                            <field name="state" widget="statusbar"
+                                statusbar_visible="borrado,registrado,adoptado"/>
+                        </header>
+                        <sheet>
+                            <div class="oe_title">
+                                <h1><field name="name"/></h1>
 
-                        </div>
-                        <notebook>
-                            <page string="nota">
-                                <field name="nota"/>
-                            </page>
-                        </notebook>
-                        
-                    </sheet>
-                </form>
-     </field>        
-</record>
+                            </div>
+                            <notebook>
+                                <page string="nota">
+                                    <field name="nota"/>
+                                </page>
+                            </notebook>
+                            
+                        </sheet>
+                    </form>
+        </field>        
+    </record>
+</odoo>
