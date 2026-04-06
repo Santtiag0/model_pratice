@@ -14,7 +14,7 @@ class Mascota(models.Model):
     )
     edad = fields.Integer(string='Edad')
     peso = fields.Integer(string= 'Peso')
-    dueño_id = fields.Many2one('res.partner', string='Dueño')    
+    dueno_id = fields.Many2one('res.partner', string='Dueño')    
     es_vacunado = fields.Boolean(string='¿Está vacunado?', default=False)
     fecha_de_nacimiento = fields.Date(string='Fecha de nacimiento')
     nota = fields.Text(string='Notas adicionales')
