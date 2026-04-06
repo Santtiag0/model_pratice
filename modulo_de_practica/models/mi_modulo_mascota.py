@@ -4,7 +4,7 @@ class Mascota(models.Model):
     _name = 'mi_modulo.mascota'
     _description = 'Mascota'
 
-    name = fields.Char(string='Nombre de la mascota', required=True)
+    name = fields.Char(string='Nombre de la')
     tipo = fields.Selection(
     [('perro', 'Perro'), 
     ('gato', 'Gato'), 
@@ -12,10 +12,9 @@ class Mascota(models.Model):
     ], string='Tipo de mascota',
     
     otro_tipo = fields.Char(string='Especifique el tipo de raza')
-        
     )
-    edad = fields.Integer(string='Edad (anos)')
-    peso = fields.float(string= 'Peso (kg)')
+    edad = fields.Integer(string='Edad')
+    peso = fields.Float(string='Peso (kg)')
     dueno_id = fields.Many2one('res.partner', string='Dueño')    
     es_vacunado = fields.Boolean(string='¿Está vacunado?', default=False)
     fecha_de_nacimiento = fields.Date(string='Fecha de nacimiento')
